@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit Pala | Data Analytics Professional</title>
+    <!-- Tailwind CSS v3 CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@1,300;1,400;1,600&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        dark: '#0a0a0a',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: white;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .selection-style::selection {
+            background: white;
+            color: black;
+        }
+        
+        /* Reveal animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .skill-tag {
+            transition: all 0.3s ease;
+        }
+        
+        .skill-tag:hover {
+            border-color: rgba(255, 255, 255, 0.3);
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="selection-style font-sans overflow-x-hidden">
+
+    <!-- --- NAVIGATION --- -->
+    <nav class="fixed top-0 w-full z-50 bg-[#0a0a0a]/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+            <span class="text-sm font-bold tracking-tighter uppercase italic">
+                Rohit Pala.
+            </span>
+            <div class="hidden md:flex gap-8 text-[10px] font-bold tracking-[0.2em] uppercase">
+                <a href="#about" class="hover:text-white/60 transition-colors">About</a>
+                <a href="#experience" class="hover:text-white/60 transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-white/60 transition-colors">Projects</a>
+                <a href="#interests" class="hover:text-white/60 transition-colors">Interests</a>
+                <a href="#contact" class="hover:text-white/60 transition-colors">Contact</a>
+            </div>
+            <!-- Mobile Menu Placeholder -->
+            <div class="md:hidden">
+                <i data-lucide="menu" class="w-5 h-5 opacity-40"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto px-6 pt-32 pb-24 space-y-32">
+        
+        <!-- --- HOME / HERO SECTION --- -->
+        <section id="about" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center reveal overflow-hidden">
+            <div>
+                <div class="flex items-center gap-2 text-white/40 text-[10px] font-bold tracking-[0.3em] uppercase mb-4">
+                    <i data-lucide="user" class="w-3.5 h-3.5"></i>
+                    <span>Introduction</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-light tracking-tighter leading-[0.9] mb-8">
+                    Hi, I'm <span class="font-semibold block font-serif italic">Rohit Pala</span>
+                </h1>
+                <p class="text-white/60 text-lg leading-relaxed max-w-md font-light">
+                    A Senior at Rutgers University specializing in Data Analytics. I love transforming raw data into compelling stories that drive strategic decisions.
+                </p>
+            </div>
+            <div class="aspect-[4/5] relative rounded-2xl overflow-hidden bg-white/5 border border-white/10 shadow-2xl group">
+                <img 
+                    src="/profile.png" 
+                    alt="Rohit Pala" 
+                    class="w-full h-full object-cover object-top grayscale brightness-90 contrast-110 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                >
+            </div>
+        </section>
+
+        <!-- --- EXPERIENCE SECTION --- -->
+        <section id="experience" class="space-y-16">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-white/10 pb-4 reveal">
+                <h2 class="text-3xl font-light tracking-tighter uppercase font-serif italic">Experience</h2>
+                <span class="text-white/30 text-[10px] font-bold tracking-[0.4em] uppercase">Impact & Growth</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Work & Education -->
+                <div class="space-y-10 reveal">
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-2 text-white/40 text-[10px] font-bold tracking-[0.2em] uppercase">
+                            <i data-lucide="briefcase" class="w-3 h-3"></i>
+                            <span>Work Experience</span>
+                        </div>
+                        
+                        <div class="border-l border-white/10 pl-6 space-y-12 relative">
+                            <!-- Role 1 -->
+                            <div class="space-y-3 relative">
+                                <div class="absolute w-2 h-2 rounded-full bg-white/20 -left-[29px] top-2"></div>
+                                <div>
+                                    <h3 class="font-medium text-lg">Data Strategy Analyst</h3>
+                                    <p class="text-sm text-white/40 italic">Healthix (NYC) | July 2024 — Dec 2024</p>
+                                </div>
+                                <ul class="text-sm text-white/60 space-y-2 leading-relaxed list-disc list-outside ml-4 font-light">
+                                    <li>Leveraged SQL to manage 500,000+ healthcare records, significantly improving data accessibility and system efficiency.</li>
+                                    <li>Developed Tableau dashboards to visualize complex healthcare trends, empowering stakeholders with data-driven decision tools.</li>
+                                    <li>Streamlined data quality by implementing rigorous validation rules, effectively reducing processing errors.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Role 2 -->
+                            <div class="space-y-3 relative">
+                                <div class="absolute w-2 h-2 rounded-full bg-white/20 -left-[29px] top-2"></div>
+                                <div>
+                                    <h3 class="font-medium text-lg">Lead Data Extern</h3>
+                                    <p class="text-sm text-white/40 italic">New Explorer’s Camp LLC | Sept 2024 — Dec 2024</p>
+                                </div>
+                                <ul class="text-sm text-white/60 space-y-2 leading-relaxed list-disc list-outside ml-4 font-light">
+                                    <li>Directed the analysis of education and healthcare datasets to uncover actionable insights for strategic planning using Python.</li>
+                                    <li>Engineered KPI reports and Excel dashboards to facilitate real-time project monitoring and executive reporting.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Role 3 -->
+                            <div class="space-y-3 relative">
+                                <div class="absolute w-2 h-2 rounded-full bg-white/20 -left-[29px] top-2"></div>
+                                <div>
+                                    <h3 class="font-medium text-lg">Cybersecurity Analyst Intern</h3>
+                                    <p class="text-sm text-white/40 italic">Resilience, Inc. (Tampa) | June 2023 — Sept 2023</p>
+                                </div>
+                                <ul class="text-sm text-white/60 space-y-2 leading-relaxed list-disc list-outside ml-4 font-light">
+                                    <li>Proactively identified and resolved security vulnerabilities through penetration testing and threat analysis.</li>
+                                    <li>Supported risk reduction across systems by implementing security improvements and detailed documentation.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-2 text-white/40 text-[10px] font-bold tracking-[0.2em] uppercase">
+                            <i data-lucide="graduation-cap" class="w-3 h-3"></i>
+                            <span>Education</span>
+                        </div>
+                        <div class="border-l border-white/10 pl-6 space-y-8 relative">
+                            <div class="space-y-1 relative">
+                                <div class="absolute w-2 h-2 rounded-full bg-white/20 -left-[29px] top-2"></div>
+                                <h3 class="font-medium text-lg leading-tight">B.S. in Business Analytics & Information Technology and Finance</h3>
+                                <p class="text-sm text-white/40">Rutgers University | Expected May 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="space-y-8 p-8 md:p-12 bg-white/5 rounded-3xl border border-white/10 h-fit reveal">
+                    <div class="flex items-center gap-2 text-white/40 text-[10px] font-bold tracking-[0.2em] uppercase mb-6">
+                        <i data-lucide="code" class="w-3 h-3"></i>
+                        <span>Technical Skills</span>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-4 py-2 bg-white/5 border border-white/10 rounded-full text-xs font-medium tracking-tight">SQL</span>
+                        <span class="skill-tag px-4 py-2 bg-white/5 border border-white/10 rounded-full text-xs font-medium tracking-tight">Excel</span>
+                        <span class="skill-tag px-4 py-2 bg-white/5 border border-white/10 rounded-full text-xs font-medium tracking-tight">Tableau</span>
+                        <span class="skill-tag px-4 py-2 bg-white/5 border border-white/10 rounded-full text-xs font-medium tracking-tight">Power BI</span>
+                        <span class="skill-tag px-4 py-2 bg-white/5 border border-white/10 rounded-full text-xs font-medium tracking-tight">Python</span>
+                        <span class="skill-tag px-4 py-2 bg-white/5 border border-white/10 rounded-full text-xs font-medium tracking-tight">Data Cleaning</span>
+                        <span class="skill-tag px-4 py-2 bg-white/5 border border-white/10 rounded-full text-xs font-medium tracking-tight">Data Visualization</span>
+                        <span class="skill-tag px-4 py-2 bg-white/5 border border-white/10 rounded-full text-xs font-medium tracking-tight">Data Analysis</span>
+                    </div>
+                    <div class="pt-6 space-y-4">
+                        <p class="text-xs text-white/30 leading-relaxed uppercase tracking-[0.2em] font-bold">Focus Areas</p>
+                        <p class="text-sm text-white/60 leading-relaxed font-light">
+                            Passionate about bridging the gap between raw datasets and business strategy through advanced analytics and visualization.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- --- PROJECTS SECTION --- -->
+        <section id="projects" class="space-y-16">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-white/10 pb-4 reveal">
+                <h2 class="text-3xl font-light tracking-tighter uppercase font-serif italic">Projects</h2>
+                <span class="text-white/30 text-[10px] font-bold tracking-[0.4em] uppercase">Selected Work</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 reveal">
+                <!-- Project 1: Eagles -->
+                <a href="https://mavenshowcase.com/project/54768" target="_blank" rel="noopener noreferrer" class="group cursor-pointer block">
+                    <div class="aspect-video rounded-2xl overflow-hidden bg-white/5 border border-white/10 mb-6 group-hover:border-white/30 transition-all duration-500">
+                        <img 
+                            src="https://images.unsplash.com/photo-1566577739112-5180d4bf9390?auto=format&fit=crop&q=80&w=800" 
+                            alt="Eagles Performance Analysis" 
+                            class="w-full h-full object-cover grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                        >
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-xl font-medium tracking-tight group-hover:font-serif group-hover:italic transition-all">Philadelphia Eagles Performance Analysis</h3>
+                        <p class="text-sm text-white/50 leading-relaxed font-light">
+                            Leveraged Power BI to analyze seasonal game data, identifying critical performance trends and win/loss correlations through interactive visualizations.
+                        </p>
+                        <div class="flex items-center gap-1 text-[10px] text-white/30 font-bold uppercase tracking-widest pt-2 group-hover:text-white transition-colors">
+                            View Case Study <i data-lucide="external-link" class="w-3 h-3"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 2: Mitron Bank -->
+                <a href="https://mavenshowcase.com/project/55107" target="_blank" rel="noopener noreferrer" class="group cursor-pointer block">
+                    <div class="aspect-video rounded-2xl overflow-hidden bg-white/5 border border-white/10 mb-6 group-hover:border-white/30 transition-all duration-500">
+                        <img 
+                            src="https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?auto=format&fit=crop&q=80&w=800" 
+                            alt="Mitron Bank Credit Analysis" 
+                            class="w-full h-full object-cover grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                        >
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-xl font-medium tracking-tight group-hover:font-serif group-hover:italic transition-all">Mitron Bank Credit Analysis</h3>
+                        <p class="text-sm text-white/50 leading-relaxed font-light">
+                            Conducted deep-dive customer segmentation and credit usage analysis, identifying high-value demographics and spending patterns to support product strategy.
+                        </p>
+                        <div class="flex items-center gap-1 text-[10px] text-white/30 font-bold uppercase tracking-widest pt-2 group-hover:text-white transition-colors">
+                            View Case Study <i data-lucide="external-link" class="w-3 h-3"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- --- INTERESTS SECTION --- -->
+        <section id="interests" class="space-y-16 bg-white/5 p-12 rounded-[3rem] border border-white/10 reveal">
+            <div class="text-center space-y-4">
+                <div class="flex justify-center items-center gap-2 text-white/40 text-[10px] font-bold tracking-[0.2em] uppercase">
+                    <i data-lucide="heart" class="w-3 h-3 text-red-500"></i>
+                    <span>Personal Side</span>
+                </div>
+                <h2 class="text-4xl font-light tracking-tighter uppercase font-serif italic">Interests & Hobbies</h2>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="flex flex-col items-center gap-4 p-8 rounded-2xl bg-white/5 border border-white/10 transition-transform hover:scale-105">
+                    <span class="text-4xl grayscale hover:grayscale-0 transition-all duration-500">🏏</span>
+                    <span class="text-sm font-medium tracking-tight opacity-70">Cricket</span>
+                </div>
+                <div class="flex flex-col items-center gap-4 p-8 rounded-2xl bg-white/5 border border-white/10 transition-transform hover:scale-105">
+                    <span class="text-4xl grayscale hover:grayscale-0 transition-all duration-500">📷</span>
+                    <span class="text-sm font-medium tracking-tight opacity-70">Photography</span>
+                </div>
+                <div class="flex flex-col items-center gap-4 p-8 rounded-2xl bg-white/5 border border-white/10 transition-transform hover:scale-105">
+                    <span class="text-4xl grayscale hover:grayscale-0 transition-all duration-500">♟️</span>
+                    <span class="text-sm font-medium tracking-tight opacity-70">Chess</span>
+                </div>
+                <div class="flex flex-col items-center gap-4 p-8 rounded-2xl bg-white/5 border border-white/10 transition-transform hover:scale-105">
+                    <span class="text-4xl grayscale hover:grayscale-0 transition-all duration-500">🥾</span>
+                    <span class="text-sm font-medium tracking-tight opacity-70">Hiking</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- --- CONTACT SECTION --- -->
+        <section id="contact" class="space-y-16 reveal">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-white/10 pb-4">
+                <h2 class="text-3xl font-light tracking-tighter uppercase font-serif italic">Stay Connected</h2>
+                <span class="text-white/30 text-[10px] font-bold tracking-[0.4em] uppercase">Let's Talk</span>
+            </div>
+
+            <div class="space-y-6">
+                <div class="flex flex-col md:flex-row gap-6">
+                    <a href="mailto:rohitzpala@gmail.com" target="_blank" class="flex-[2] flex items-center justify-between p-10 bg-white/5 rounded-[2rem] border border-white/10 hover:bg-white hover:text-black transition-all duration-500 group">
+                        <div class="space-y-1">
+                            <span class="text-[10px] font-bold tracking-[0.2em] uppercase opacity-40 group-hover:opacity-100">Primary Channel</span>
+                            <h3 class="text-2xl font-light tracking-tight">rohitzpala@gmail.com</h3>
+                        </div>
+                        <i data-lucide="mail" class="w-6 h-6 opacity-20 group-hover:opacity-100"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/rohit-z-pala-9011b3278/" target="_blank" class="flex-[2] flex items-center justify-between p-10 bg-white/5 rounded-[2rem] border border-white/10 hover:bg-[#0077B5] transition-all duration-500 group">
+                        <div class="space-y-1">
+                            <span class="text-[10px] font-bold tracking-[0.2em] uppercase opacity-40 group-hover:opacity-100">Professional Network</span>
+                            <h3 class="text-2xl font-light tracking-tight">Rohit Z Pala</h3>
+                        </div>
+                        <i data-lucide="linkedin" class="w-6 h-6 opacity-20 group-hover:opacity-100"></i>
+                    </a>
+                </div>
+
+                <a href="https://instagram.com/rohitpala9" target="_blank" class="flex items-center justify-between p-6 bg-white/5 rounded-2xl border border-white/10 hover:border-pink-500/50 hover:bg-white/10 transition-all duration-500 group max-w-sm ml-auto">
+                    <div class="flex items-center gap-4">
+                        <i data-lucide="instagram" class="w-5 h-5 opacity-40 group-hover:opacity-100 group-hover:text-pink-500"></i>
+                        <span class="text-sm font-medium tracking-tight opacity-60 group-hover:opacity-100 italic">@rohitpala9</span>
+                    </div>
+                    <i data-lucide="external-link" class="w-4 h-4 opacity-20 group-hover:opacity-100"></i>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="max-w-5xl mx-auto px-6 py-12 border-t border-white/5 text-center space-y-4">
+        <p class="text-[10px] text-white/20 font-bold tracking-[0.4em] uppercase">
+            © <span id="year"></span> Rohit Pala — Created for Data Impact
+        </p>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Update Footer Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Reveal Animations Logic
+        function reveal() {
+            const reveals = document.querySelectorAll(".reveal");
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveals[i].getBoundingClientRect().top;
+                const elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", reveal);
+        // Initial check
+        reveal();
+    </script>
+</body>
+</html>
